@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café & Conforto</title>
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            font-size: 20px;
+            margin: 0;
+            background: url("C:/Users/luann/OneDrive/Área de Trabalho/Nova pasta (3)/fundo.jpg") no-repeat fixed;
+            background-size: cover;
+            color: #442b00;
+            text-align: center;
+        }
+
+        .header-bar {
+            background-color: #fff;
+            text-align: left;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .title {
+            font-size: 28px;
+        }
+
+        .slideshow-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .slide-buttons {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .slide-buttons:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0.4;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .space-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 400px;
+            margin: 20px 0;
+        }
+
+        .space-image {
+            max-width: 256px;
+            max-height: 256px;
+        }
+
+        .section-text {
+            margin-top: 10px;
+            padding: 0 20px;
+        }
+
+        .white-bar {
+            background-color: #fff;
+            height: 5px;
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .text-over-white-bar {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-bar">
+        <img src="C:\Users\luann\OneDrive\Área de Trabalho\OIP.png" alt="Café & Conforto Logo" class="logo">
+        <h1 class="title">Café & Conforto, O melhor café da cidade</h1>
+    </header>
+
+    <section id="menu">
+        <h2>Conheça nosso Menu</h2>
+        <p>Nosso Menu está repleto de várias bebidas e comidas deliciosas entre as principais estão estas:</p>
+        <!-- Adicione os itens do menu aqui com descrições -->
+    </section>
+
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="C:\Users\luann\Downloads\Mida\Slide1.JPG" alt="Imagem 1">
+            <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <!-- Repita o mesmo padrão para outras imagens do slideshow -->
+        <div class="slide fade">
+            <img src="C:\Users\luann\Downloads\Mida\Slide2.JPG" alt="Imagem 2">
+            <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="slide fade">
+            <img src="C:\Users\luann\Downloads\Mida\Slide3.JPG" alt="Imagem 3">
+            <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="slide fade">
+            <img src="C:\Users\luann\Downloads\Mida\Slide4.JPG" alt="Imagem 4">
+            <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </div>
+    <hr>
+    <!-- Seção para as imagens do nosso espaço (fora do slideshow) -->
+    <section id="ambiance">
+        <h2>Nosso Espaço</h2>
+        <p class="section-text">Aconchegante e relaxante. Venha nos visitar e aproveite o ambiente tranquilo.</p>
+        <img src="C:\Users\luann\OneDrive\Área de Trabalho\Nova pasta (3)\labtop.jpg" alt="Imagem de localização 1" class="space-image">
+        <img src="C:\Users\luann\OneDrive\Área de Trabalho\Nova pasta (3)\lendo.jpg" alt="Imagem de localização 2" class="space-image">
+        <img src="C:\Users\luann\OneDrive\Área de Trabalho\Nova pasta (3)\bolsa.jpg" alt="Imagem de localização 3" class="space-image">
+    </section>
+    <hr>
+    <!-- Seção de Localização -->
+    <section id="location">
+        <h2>Localização</h2>
+        <p>123 Rua do Café, Cidade, Estado</p>
+        <img src="C:\Users\luann\OneDrive\Área de Trabalho\Nova pasta (3)\cafeteria de fora.jpg" alt="Imagem de localização 1" class="space-image">
+        <img src="C:\Users\luann\OneDrive\Área de Trabalho\Nova pasta (3)\messas.jpg" alt="Imagem de localização 2" class="space-image">
+        <img src="C:\Users\luann\OneDrive\Área de Trabalho\Nova pasta (3)\Mapa.jpg" alt="Imagem de localização 3" class="space-image">
+    </section>
+    <hr>
+    <!-- Texto sobre a barra branca -->
+    <div class="text-over-white-bar">
+        <h2>Reservas e Informações</h2>
+        <p>Email: cafeconforto@email.com</p>
+        <p>Telefone: (00)</p>
+        <img src="C:\Users\luann\OneDrive\Área de Trabalho\Nova pasta (3)\Links.jpg" class="space-image">
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+
+        function changeSlide(n) {
+            slideIndex += n;
+            let slides = document.querySelectorAll(".slide");
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            if (slideIndex < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++)
+                slides[i].style.display = "none";
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
