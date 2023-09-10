@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café & Conforto</title>
     <style>
+        /* Estilos para o corpo da página */
+
         body {
             font-family: 'Pacifico', cursive;
             font-size: 20px;
@@ -15,12 +17,15 @@
             text-align: center;
         }
 
+        /* Estilos para o header */
         .header-bar {
-            background-color: #fff;
-            text-align: left;
-            padding: 10px;
+            background-color: #442b00;
+            color: #ffff;
+            padding: 20px 0;
+            text-align: center;
             display: flex;
             align-items: center;
+            justify-content: flex-start;
         }
 
         .logo {
@@ -30,188 +35,224 @@
         }
 
         .title {
-            font-size: 28px;
+            font-size: 32px;
+            margin: 0;
+            color: #fff; /* Cor do título em marrom */
         }
 
-        .slideshow-container {
-            max-width: 1000px;
-            margin: 0 auto;
+        /* Estilos para a barra de navegação de links */
+        .nav-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            background-color: #b3a3ac; /* Cor de fundo da barra de navegação em branco */
+        }
+
+        .nav-links ul li {
+            margin: 0 20px;
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+            color: #442b00; /* Cor dos links em marrom */
+            font-size: 20px;
+        }
+
+        .nav-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para as seções */
+        section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #442b00;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Estilos para imagens nas seções */
+        .space-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos para a barra de contato */
+        .text-over-white-bar {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Slideshow styles */
+        .slideshow-container {
             position: relative;
+            max-width: 100%;
+            margin: auto;
         }
 
         .slide {
             display: none;
         }
 
-        img {
-            width: 100%;
+        img.slide-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
+        /* Previous and Next buttons */
         .slide-buttons {
             position: absolute;
             top: 50%;
-            font-size: 24px;
+            transform: translateY(-50%);
+            font-size: 30px;
+            padding: 16px;
             color: white;
+            background: rgba(0, 0, 0, 0.3);
             cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            border: none;
-            outline: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
         }
 
         .slide-buttons:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.7);
         }
 
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
+        .prev {
+            left: 0;
         }
 
-        @keyframes fade {
-            0% {
-                opacity: 0.4;
-            }
-            100% {
-                opacity: 1;
-            }
+        .next {
+            right: 0;
         }
 
-        .space-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 400px;
-            margin: 20px 0;
+        /* Estilos para o rodapé */
+        .footer {
+            background-color: #442b00; /* Cor de fundo do rodapé em branco */
+            padding: 10px 0;
         }
 
-        .space-image {
-            max-width: 256px;
-            max-height: 256px;
-        }
-
-        .section-text {
-            margin-top: 10px;
-            padding: 0 20px;
-        }
-
-        .white-bar {
-            background-color: #fff;
-            height: 5px;
-            width: 100%;
-            margin-bottom: 0;
-        }
-
-        .text-over-white-bar {
-            background-color: #fff;
-            text-align: center;
-            padding: 20px 0;
+        .container {
+            color: #ffffff; /* Cor do texto do rodapé em cinza */
         }
     </style>
 </head>
 <body>
     <header class="header-bar">
         <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/OIP.png" alt="Café & Conforto Logo" class="logo">
-        <h1 class="title">Café & Conforto, O melhor café da cidade</h1>
+        <h1 class="title">Café & Conforto</h1>
     </header>
-
-    <section id="menu">
+    <nav class="nav-links">
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#ambiance">Espaço</a></li>
+            <li><a href="#location">Localização</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+    <div>
         <h2>Conheça nosso Menu</h2>
         <p>Nosso Menu está repleto de várias bebidas e comidas deliciosas entre as principais estão estas:</p>
         <!-- Adicione os itens do menu aqui com descrições -->
-    </section>
-
-    <div class="slideshow-container">
-        <div class="slide fade">
-            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Slide1.JPG" alt="Imagem 1">
-            <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Slide1.JPG" alt="Imagem 1" class="slide-image">
+                <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            <!-- Repita o mesmo padrão para outras imagens do slideshow -->
+            <div class="slide fade">
+                <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Slide2.JPG" alt="Imagem 2" class="slide-image">
+                <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            <div class="slide fade">
+                <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Slide3.JPG" alt="Imagem 3" class="slide-image">
+                <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            <div class="slide fade">
+                <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Slide4.JPG" alt="Imagem 4" class="slide-image">
+                <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
+            </div>
         </div>
-        <!-- Repita o mesmo padrão para outras imagens do slideshow -->
-        <div class="slide fade">
-            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Slide2.JPG" alt="Imagem 2">
-            <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
-        </div>
-        <div class="slide fade">
-            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Slide3.JPG" alt="Imagem 3">
-            <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
-        </div>
-        <div class="slide fade">
-            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Slide4.JPG" alt="Imagem 4">
-            <a class="prev slide-buttons" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next slide-buttons" onclick="changeSlide(1)">&#10095;</a>
-        </div>
+        <hr>
+        <!-- Seção para as imagens do nosso espaço (fora do slideshow) -->
+        <section id="ambiance">
+            <h2>Nosso Espaço</h2>
+            <p class="section-text">Aconchegante e relaxante. Venha nos visitar e aproveite o ambiente tranquilo.</p>
+            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/labtop.jpg" alt="Imagem de localização 1" class="space-image">
+            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/lendo.jpg" alt="Imagem de localização 2" class="space-image">
+            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/bolsa.jpg" alt="Imagem de localização 3" class="space-image" style="max-width: 256px">
+        </section>
+        <hr>
+        <!-- Seção de Localização -->
+        <section id="location">
+            <h2>Localização</h2>
+            <p>123 Rua do Café, Cidade, Estado</p>
+            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/cafeteria%20de%20fora.jpg" alt="Imagem de localização 1" class="space-image">
+            <img src="https://i.pinimg.com/originals/20/d8/73/20d8733b97d44108a7c4cc40564dff71.gif" alt="Imagem de localização 2" class="space-image">
+            <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/messas.jpg" alt="Imagem de localização 3" class="space-image">
+        </section>
+        <!-- Texto sobre a barra branca -->
+        <section id="contact">
+            <div class="text-over-white-bar">
+                <h2>Reservas e Informações</h2>
+                <p>Email: cafeconforto@email.com</p>
+                <p>Telefone: (00)</p>
+                <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Links.jpg" class="logo">
+            </div>
+        </section>
     </div>
-    <hr>
-    <!-- Seção para as imagens do nosso espaço (fora do slideshow) -->
-    <section id="ambiance">
-        <h2>Nosso Espaço</h2>
-        <p class="section-text">Aconchegante e relaxante. Venha nos visitar e aproveite o ambiente tranquilo.</p>
-        <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/labtop.jpg" alt="Imagem de localização 1" class="space-image">
-        <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/lendo.jpg" alt="Imagem de localização 2" class="space-image">
-        <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/bolsa.jpg" alt="Imagem de localização 3" class="space-image">
-    </section>
-    <hr>
-    <!-- Seção de Localização -->
-    <section id="location">
-        <h2>Localização</h2>
-        <p>123 Rua do Café, Cidade, Estado</p>
-        <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/cafeteria%20de%20fora.jpg" alt="Imagem de localização 1" class="space-image">
-        <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/messas.jpg" alt="Imagem de localização 2" class="space-image">
-        <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/mapa.jpg" alt="Imagem de localização 3" class="space-image">
-    </section>
-    <hr>
-    <!-- Texto sobre a barra branca -->
-    <div class="text-over-white-bar">
-        <h2>Reservas e Informações</h2>
-        <p>Email: cafeconforto@email.com</p>
-        <p>Telefone: (00)</p>
-        <img src="https://raw.githubusercontent.com/Luann8/Cafeteria-ficticia/main/Links.jpg" class="space-image">
-    </div>
-    <script>
-        let slideIndex = 0;
-        showSlides();
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Serenity Flow - Cafeteria-ficticia</p>
+            <script>
+                let slideIndex = 0;
+                showSlides();
 
-        function showSlides() {
-            let slides = document.querySelectorAll(".slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000);
-        }
+                function showSlides() {
+                    let slides = document.querySelectorAll(".slide");
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    setTimeout(showSlides, 2000);
+                }
 
-        function changeSlide(n) {
-            slideIndex += n;
-            let slides = document.querySelectorAll(".slide");
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            if (slideIndex < 1) {
-                slideIndex = slides.length;
-            }
-            for (let i = 0; i < slides.length; i++)
-                slides[i].style.display = "none";
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
+                function changeSlide(n) {
+                    slideIndex += n;
+                    let slides = document.querySelectorAll(".slide");
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                    }
+                    if (slideIndex < 1) {
+                        slideIndex = slides.length;
+                    }
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                }
+            </script>
+        </div>
+    </footer>
 </body>
 </html>
